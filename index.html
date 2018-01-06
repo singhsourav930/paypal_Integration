@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mywebsite</title>
+    <style>
+        table{
+            text-align: center;
+            border-color: lightgray;
+            width: 80%
+        }
+        img{
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Cart Items</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Quantity</th>
+        </tr>
+        <tr>
+            <td><img src="images/7239276_R_SET.jpg" alt=""></td>
+            <td>HTC LATEST CELL PHONE</td>
+            <td>$250</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td><img src="images/xiaomi-redmi-3s-plus-xxl.jpg" alt=""></td>
+            <td>REDMI MI INDIA'S BEST CELL PHONE</td>
+            <td>$140</td>
+            <td>2</td>
+        </tr>
+    </table>
+  
+      <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_cart">
+        <input type="hidden" name="upload" value="1">
+        <input type="hidden" name="business" value="fakebusiness1264@gmail.com">
+        
+        <input type="hidden" name="item_name_1" value="HTC LATEST CELL PHONE">
+        <input type="hidden" name="amount_1" value="250">
+        <input type="hidden" name="quantity_1" value="3">
+        
+        <input type="hidden" name="item_name_2" value="REDMI MI INDIA'S BEST CELL PHONE">
+        <input type="hidden" name="amount_2" value="140">
+        <input type="hidden" name="quantity_2" value="2">
+        <input type="submit" value="PayPal">
+        </form>
+  
+</body>
+</html>
